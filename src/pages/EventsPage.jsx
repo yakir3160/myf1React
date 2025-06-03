@@ -1,11 +1,9 @@
-import { useDataContext } from "../contexts/data.context"
-
-
+import { useF1Store } from "../store/useF1Store"
 
 
 
 const EventsPage = () =>{
-    const {drivers,teams} = useDataContext()
+    const {teams} = useF1Store();
     return(
         <div>
             Events Page

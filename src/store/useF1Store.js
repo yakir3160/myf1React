@@ -1,11 +1,18 @@
 import { create } from "zustand";
-import {driversData, teamsData} from "../mockData";
+
 export const useF1Store = create((set) => ({
     // Initial state for drivers and teams
-    drivers: [teamsData],
-    teams: driversData,
+    drivers: [],
+    teams: [],
+    isLoading : false,
+    error: null,
+
     // Actions to set drivers and teams directly
-    setDrivers: () => set((drivers) => ({drivers })),
-    setTeams: () => set((teams) => ({ teams })),
+    setDrivers: (drivers) => {set({ drivers });},
+    setTeams: (teams) => {set({ teams });},
+    setIsLoading: (isLoading) => set({ isLoading }),
+    setError: (error) => set({ error }),
 }));
+
+
 
