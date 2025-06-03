@@ -10,7 +10,7 @@ const StandingsPage = () => {
 
 
     useFetchData(); // Fetch data on initial render
-    const {isLoading } = useF1Store();
+    const { isLoading, error } = useF1Store();
 
     return (
         <div className="p-6 text-black   mx-auto bg-gray-100 rounded-xl shadow-md ">
@@ -21,12 +21,14 @@ const StandingsPage = () => {
             />
             {/* Content based on active tab */}
             {isLoading ? <div className="text-center text-gray-500">Loading...</div>
-                :
-                <div className="bg-white p-4  rounded-xl shadow min-h-64">
-                    {activeTab === 'drivers' && <DriversTable />}
-                    {activeTab === 'teams' && <TeamsTable />}
-                </div>
+                : error ? <div className="text-center text-red-500">{error}</div>
+                    :
+                    <div className="bg-white p-4  rounded-xl shadow min-h-64">
+                        {activeTab === 'drivers' && <DriversTable />}
+                        {activeTab === 'teams' && <TeamsTable />}
+                    </div>
             }
+
 
         </div>
     );

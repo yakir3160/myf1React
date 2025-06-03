@@ -3,9 +3,8 @@ import { useF1Store } from "../store/useF1Store"
 
 const DriversTable = () => {
 
-    const { drivers,teams} = useF1Store();
-    console.log("Drivers:", drivers);
-    console.log("Teams:", teams);
+    const { drivers} = useF1Store();
+
     return (
         <div className="w-full">
             <strong className="text-red-700">Drivers</strong>
