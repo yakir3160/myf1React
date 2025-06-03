@@ -1,21 +1,8 @@
-import { useEffect, useState } from "react"
-import {useDataContext} from '@src/contexts/data.context.jsx'
+import { useF1Store } from "../store/useF1Store"
+
 
 const DriversTable = () => {
-    const {drivers,setDrivers} = useDataContext()
-    setDrivers()
-    // const getDrivesStandings = async () => {
-    //     const res = await fetch("https://f1api.dev/api/current/drivers-championship")
-    //     const data = await res.json()
-    //     console.log(data);
-    //     setDrivers(data.drivers_championship);
-    // }
-    
-    // useEffect(() => {
-    //     getDrivesStandings();
-    // }, [])
-  
-
+    const {drivers} = useF1Store()
     return (
         <div className="w-full">
             <strong className="text-red-700">Drivers</strong>

@@ -1,20 +1,12 @@
-import { useState,useEffect } from "react"
-import { useDataContext } from "../contexts/data.context.jsx"
+import { useF1Store } from "../store/useF1Store"
+import React from 'react'
 
 
 
 const TeamsTable = () => {
-    const {teams,setTeams} = useDataContext()
-    // const getTeamsStandings = async () =>{
-    //     const res = await fetch("https://f1api.dev/api/current/constructors-championship")
+   const { teams } = useF1Store()
+        
 
-    //     const data = await res.json()
-    //     console.log(data);
-    //     setTeams(data.constructors_championship)
-    // }
-    // useEffect(()=>{
-    //     getTeamsStandings();
-    // },[])
     return (
         <div className="w-full">
             <strong className="text-red-700">Teams</strong>
