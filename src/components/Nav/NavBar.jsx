@@ -1,32 +1,42 @@
 
 import speedyImage from '@assets/speedy.png'
 import NavButton from '@components/Nav/NavButton.jsx'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <header className="bg-red-600 text-white h-16 flex items-center px-6 shadow-md rounded-b-xl">
-            <button>
-                <img src={speedyImage} alt="speedy" className='size-16' />
-            </button>
-            <div>
-                <NavButton
-                    text={'Standings'}
-                    to={'standings'}
-                />
-                <NavButton
-                    text={'Drivers'}
-                    to={'drivers'}
-                />
-                <NavButton
-                    text={'Teams'}
-                    to={'teams'}
-                />
-                <NavButton
-                    text={'Events'}
-                    to={'events'}
-                />
+        <header className="bg-gradient-to-r from-red-700 to-red-600 text-white p-3 shadow-lg sticky top-0 z-50">
+            <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
+                {/* Logo and Brand */}
+                <Link to="/" className="flex items-center space-x-2 group">
+                    <img 
+                        src={speedyImage} 
+                        alt="Formula 1 Logo" 
+                        className="h-12 w-12 object-contain transform transition-transform group-hover:scale-110" 
+                    />
+                    <span className="text-xl font-bold hidden sm:block">MyF1</span>
+                </Link>
+                
+                {/* Navigation */}
+                <nav className="flex items-center space-x-1 py-1">
+                    <NavButton
+                        text={'Standings'}
+                        to={'standings'}
+                    />
+                    <NavButton
+                        text={'Drivers'}
+                        to={'drivers'}
+                    />
+                    <NavButton
+                        text={'Teams'}
+                        to={'teams'}
+                    />
+                    <NavButton
+                        text={'Events'}
+                        to={'events'}
+                    />
+                </nav>
             </div>
-
         </header>
     )
 }

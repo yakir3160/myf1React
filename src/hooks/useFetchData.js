@@ -10,7 +10,7 @@ export const useFetchData = () => {
             setIsLoading(true);
             try {
                 const [driversResponse, teamsResponse] = await Promise.all([
-                    fetch("https://f1api.dev/api/curren/drivers-championship"),
+                    fetch("https://f1api.dev/api/current/drivers-championship"),
                     fetch("https://f1api.dev/api/current/constructors-championship")
                 ]);
 

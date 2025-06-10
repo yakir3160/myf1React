@@ -7,13 +7,13 @@ import { useFetchData } from './hooks/useFetchData';
 const AppLayout = () => {
   useFetchData(); // Fetch data on initial render
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Navbar */}
       <NavBar />
       
       {/* Main Content */}
-      <main className="flex justify-center mt-6 flex-1">
-        <div className="w-[90%]">
+      <main className="flex justify-center py-8 flex-1">
+        <div className="w-[95%] max-w-7xl mx-auto">
           <Outlet />
         </div>
       </main>
