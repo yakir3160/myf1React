@@ -20,7 +20,7 @@ const DriversTable = () => {
                     </div>
                 </div>
                 {
-                    drivers?.map((d, index) => (
+                    drivers.standings?.map((d, index) => (
                         <li 
                             key={d.driver.name} 
                             className={`text-black w-full rounded-md hover:bg-gray-100 transition-all
@@ -40,7 +40,7 @@ const DriversTable = () => {
                         </li>
                     ))
                 }
-                {!drivers?.length && (
+                {!drivers.standings?.length && (
                     <div className="text-center py-4 text-gray-500">No driver data available</div>
                 )}
             </ul>

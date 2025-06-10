@@ -17,7 +17,7 @@ const TeamsTable = () => {
                         <strong className="w-1/2 text-right">Points</strong>
                     </div>
                 </div>
-                {teams?.map((t, index) => (
+                {teams.standings?.map((t, index) => (
                     <li
                         key={t.teamId}
                         className={`text-black w-full rounded-md hover:bg-gray-100 transition-all
@@ -33,7 +33,7 @@ const TeamsTable = () => {
                         </div>
                     </li>
                 ))}
-                {!teams?.length && (
+                {!teams.standings?.length && (
                     <div className="text-center py-4 text-gray-500">No team data available</div>
                 )}
             </ul>
