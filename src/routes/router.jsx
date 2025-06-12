@@ -1,12 +1,12 @@
 // src/router.js
 import { createBrowserRouter } from "react-router-dom";
-import AppLayout from "@src/AppLayout";
+import AppLayout from "../AppLayout";
 
-import HomePage from "@src/pages/HomePage";
-import StandingsPage from "@src/pages/StandingsPage";
-import DriversPage from "@src/pages/DriversPage";
-import TeamsPage from "@src/pages/TeamsPage";
-import EventsPage from "@src/pages/EventsPage";
+import HomePage from "../pages/HomePage";
+import StandingsPage from "../pages/StandingsPage";
+import DriversPage from "../pages/DriversPage";
+import TeamsPage from "../pages/TeamsPage";
+import EventsPage from "../pages/EventsPage";
 
 const router = createBrowserRouter([
   {
